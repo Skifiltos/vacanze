@@ -7,7 +7,9 @@ const SingleHoliday = (
     durata,
     prezzo,
     descrizione,
-    img
+    img,
+    next,
+    prev
   }
 ) => {
   return <div className="holiday-container">
@@ -24,13 +26,14 @@ const SingleHoliday = (
         </div>
         <div className="btn-group">
 
-          <button className="btn btn-reset">
+          <button className="btn btn-reset" onClick={prev}>
             <GrFormPreviousLink className="icon"/>
           </button>
 
-          <button className="btn btn-reset">
+          <button className="btn btn-reset" onClick={next}>
             {" "}
             <GrFormNextLink className="icon"/>
+            {" "}
           </button>
 
         </div>
